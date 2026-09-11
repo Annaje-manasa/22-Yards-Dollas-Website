@@ -5,14 +5,10 @@ import SiteUtilityBar from "./SiteUtilityBar";
 const navLinks = [
   "HOME",
   "ABOUT US",
-  "OUR TEAM",
-  "COACHING",
-  "LANE RENTALS",
   "SPECIAL EVENTS",
   "GALLERY",
   "CONTACT US",
-  "STORE",
-  "REGISTRATION",
+  "SKA REGISTRATION",
 ];
 
 export default function SiteHeader({ activePage = "", showNavLinks }) {
@@ -28,18 +24,26 @@ export default function SiteHeader({ activePage = "", showNavLinks }) {
           position: relative;
           white-space: nowrap;
           font-family: 'Inter', sans-serif !important;
-          font-size: 14px !important;
+          font-size: 13px !important;
           font-weight: 600 !important;
-          letter-spacing: 0.4px !important;
+          letter-spacing: 0.2px !important;
+          display: inline-flex;
+          align-items: center;
+        }
+        @media (min-width: 1280px) {
+          .cu-navlink {
+            font-size: 13.5px !important;
+          }
         }
         .cu-navlink.active::after {
           content: '';
           position: absolute;
           left: 0;
           right: 0;
-          bottom: -6px;
-          height: 2px;
+          bottom: -4px;
+          height: 2.5px;
           background: #F6C915;
+          border-radius: 2px;
         }
         .cu-btn-yellow {
           transition: background 0.15s ease, transform 0.1s ease;
@@ -53,7 +57,7 @@ export default function SiteHeader({ activePage = "", showNavLinks }) {
       <SiteUtilityBar />
 
       {/* Main navigation header */}
-      <div className="w-full flex items-center justify-between px-3 py-2 sm:px-6 lg:px-10 lg:py-4 border-b border-gray-200 bg-white box-border flex-nowrap">
+      <div className="w-full flex items-center justify-between px-3 py-2 sm:px-6 lg:px-6 xl:px-10 lg:py-3.5 border-b border-gray-200 bg-white box-border flex-nowrap">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 lg:gap-2.5 flex-shrink-0 text-none no-underline">
           <div
@@ -74,13 +78,10 @@ export default function SiteHeader({ activePage = "", showNavLinks }) {
 
         {shouldShowNavLinks && (
           <>
-            {/* Desktop Nav Links & Book Now Button */}
-            <div className="hidden lg:flex items-center gap-5 xl:gap-6 flex-wrap">
+            {/* Desktop Nav Links (Centered) */}
+            <div className="hidden lg:flex items-center justify-center flex-1 mx-4 lg:mx-6 gap-6 lg:gap-7 xl:gap-9 2xl:gap-12 flex-nowrap">
               {navLinks.map((link) => {
-                const isReg = link === "REGISTRATION";
-                const href = isReg
-                  ? "https://docs.google.com/forms/d/e/1FAIpQLScPhKS-lx35asRIcnE8TSXLftCAkrbWK-n4BwTao9FKsxYNcA/viewform?usp=dialog"
-                  : link === "HOME" ? "#" : link === "ABOUT US" ? "#about" : link === "OUR TEAM" ? "#our-team" : link === "COACHING" ? "#coaching" : link === "LANE RENTALS" ? "#lane-rentals" : link === "SPECIAL EVENTS" ? "#special-events" : link === "GALLERY" ? "#gallery" : link === "CONTACT US" ? "#contact" : link === "STORE" ? "#store" : "#";
+                const href = link === "SKA REGISTRATION" ? "#coaching" : link === "HOME" ? "#" : link === "ABOUT US" ? "#about" : link === "SPECIAL EVENTS" ? "#special-events" : link === "GALLERY" ? "#gallery" : link === "CONTACT US" ? "#contact" : "#";
                 const isActive = activePage.toUpperCase() === link;
                 return (
                   <a
@@ -96,33 +97,33 @@ export default function SiteHeader({ activePage = "", showNavLinks }) {
                   </a>
                 );
               })}
-
-              <a
-                href="#book-a-lane"
-                className="cu-btn-yellow shadow flex-shrink-0"
-                style={{
-                  background: "#F6C915",
-                  border: "none",
-                  borderRadius: 8,
-                  padding: "8px 16px",
-                  fontWeight: 700,
-                  fontSize: 13,
-                  color: "#053a68",
-                  cursor: "pointer",
-                  textDecoration: "none",
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: 6,
-                  whiteSpace: "nowrap",
-                  letterSpacing: "0.04em",
-                  fontFamily: "'Inter', sans-serif",
-                  textTransform: "uppercase",
-                }}
-              >
-                <PlusCircle size={15} style={{ color: "#053a68", strokeWidth: 2.5 }} />
-                BOOK A LANE
-              </a>
             </div>
+
+            {/* Desktop Book Now Button (Right Aligned) */}
+            <a
+              href="#book-a-lane"
+              className="hidden lg:inline-flex cu-btn-yellow shadow flex-shrink-0"
+              style={{
+                background: "#F6C915",
+                border: "none",
+                borderRadius: 8,
+                padding: "8px 16px",
+                fontWeight: 700,
+                fontSize: 13,
+                color: "#053a68",
+                cursor: "pointer",
+                textDecoration: "none",
+                alignItems: "center",
+                gap: 6,
+                whiteSpace: "nowrap",
+                letterSpacing: "0.04em",
+                fontFamily: "'Inter', sans-serif",
+                textTransform: "uppercase",
+              }}
+            >
+              <PlusCircle size={15} style={{ color: "#053a68", strokeWidth: 2.5 }} />
+              BOOK A LANE
+            </a>
 
             {/* Mobile Header Actions (Menu bar in middle, Book Now on right like Image 2) */}
             <div className="flex lg:hidden items-center justify-between flex-1 ml-2">
@@ -170,10 +171,7 @@ export default function SiteHeader({ activePage = "", showNavLinks }) {
       {shouldShowNavLinks && menuOpen && (
         <div className="lg:hidden border-t border-gray-100 py-4 flex flex-col items-center bg-white">
           {navLinks.map((link) => {
-            const isReg = link === "REGISTRATION";
-            const href = isReg
-              ? "https://docs.google.com/forms/d/e/1FAIpQLScPhKS-lx35asRIcnE8TSXLftCAkrbWK-n4BwTao9FKsxYNcA/viewform?usp=dialog"
-              : link === "HOME" ? "#" : link === "ABOUT US" ? "#about" : link === "OUR TEAM" ? "#our-team" : link === "COACHING" ? "#coaching" : link === "LANE RENTALS" ? "#lane-rentals" : link === "SPECIAL EVENTS" ? "#special-events" : link === "GALLERY" ? "#gallery" : link === "CONTACT US" ? "#contact" : link === "STORE" ? "#store" : "#";
+            const href = link === "SKA REGISTRATION" ? "#coaching" : link === "HOME" ? "#" : link === "ABOUT US" ? "#about" : link === "SPECIAL EVENTS" ? "#special-events" : link === "GALLERY" ? "#gallery" : link === "CONTACT US" ? "#contact" : "#";
             return (
               <a
                 key={link}

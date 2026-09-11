@@ -13,10 +13,10 @@ const COLORS = {
   border: "#E2E8F0",
 };
 
-const navLinks = ["HOME", "ABOUT US", "COACHING", "LANE RENTALS", "SPECIAL EVENTS", "SUMMER CAMP", "CONTACT US", "REGISTRATION"];
+const navLinks = ["HOME", "ABOUT US", "SPECIAL EVENTS", "SUMMER CAMP", "CONTACT US", "SKA REGISTRATION"];
 
-const exploreLinks = ["Home", "About Us", "Our Team", "Coaching", "Lane Rental"];
-const moreLinks = ["Special Events", "Gallery", "Store", "Franchise", "FAQs", "Contact Us"];
+const exploreLinks = ["Home", "About Us", "Coaching"];
+const moreLinks = ["Special Events", "Gallery", "Franchise", "FAQs", "Contact Us"];
 
 export default function ContactUs() {
   const [form, setForm] = useState({

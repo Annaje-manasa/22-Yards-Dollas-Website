@@ -251,7 +251,7 @@ export default function HomePage() {
     }
   };
 
-  const navLinks = ["Home", "About Us", "Coaching", "Lane Rentals", "Special Events", "Summer Camp", "Contact Us", "Registration"];
+  const navLinks = ["Home", "About Us", "Special Events", "Summer Camp", "Contact Us", "SKA Registration"];
 
   // ---- CONTENT from 22yardsdallas.com ----
 
@@ -272,7 +272,6 @@ export default function HomePage() {
 
   const coaches = [
     { name: "Vardhan Vundavalli", role: "Expert Mentor", img: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg" },
-    { name: "Ian Dev Singh", role: "Cricket Specialist", img: "https://22yardsdallas.com/wp-content/uploads/2026/04/Ian-Dev-Singh_22yardsdallas.png" },
     { name: "Head Coach", role: "Lead Batting Coach" },
     { name: "Bowling Coach", role: "Pace & Spin Specialist" },
   ];
@@ -302,6 +301,13 @@ export default function HomePage() {
       img: IMG.celebration,
       badge: "🏆 Compete",
     },
+    {
+      title: "Ladies' / Stag / Couples Nights",
+      text: "Themed recurring nights featuring customized setup, music, and exclusive access for group celebrations and social gatherings.",
+      img: IMG.mezzanineLounge,
+      badge: "🍸 Nights",
+    },
+    
   ];
 
   const gallery = [
@@ -608,7 +614,7 @@ export default function HomePage() {
             </div>
             <OutlineButton icon={ArrowRight} href="#our-team">Meet the full team</OutlineButton>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-1 md:grid-cols-3 gap-6">
             {coaches.map((c) => (
               <div key={c.name} className="bg-white rounded-xl overflow-hidden shadow-sm group transition-all duration-300 hover:-translate-y-2 hover:shadow-lg">
                 <div className="h-52 w-full overflow-hidden relative" style={{ background: "#E1EBF4" }}>
@@ -640,39 +646,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ============================ TESTIMONIALS ============================ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center">
-          <Eyebrow>Reviews</Eyebrow>
-          <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase mb-4" style={{ color: NAVY }}>Trusted by players. Loved by families.</h2>
-          <p className="ty-body mb-12" style={{ color: "#5B7A94" }}>What Dallas cricket families say after a season at 22 Yards.</p>
-          <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
-              <div key={i} className="rounded-xl border border-gray-100 p-6 text-left shadow-sm">
-                <div className="flex gap-0.5 mb-3">{[...Array(5)].map((_, s) => <Star key={s} size={14} fill={YELLOW} color={YELLOW} />)}</div>
-                <p className="ty-body text-sm italic mb-5" style={{ color: "#6B8399" }}>"{t.quote}"</p>
-                <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold" style={{ background: SKY_LIGHT, color: NAVY }}>{t.name[0]}</div>
-                  <div>
-                    <div className="ty-body text-sm font-bold" style={{ color: NAVY }}>{t.name}</div>
-                    <div className="ty-body text-xs" style={{ color: "#9AAEC0" }}>{t.role}</div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ============================ SPECIAL EVENTS ============================ */}
       <section style={{ background: SKY_LIGHT }} className="py-20">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-7xl mx-auto px-6">
           <SectionHeading
             eyebrow="Special events"
             title="Special Events at 22Yards Dallas"
             sub="Prime Choice for Birthday Parties, Corporate Events and Sporting Events! Transform your celebrations and team-building events into memorable experiences at our premium facility."
           />
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 xl:gap-6">
             {events.map((e) => (
               <div key={e.title} className="bg-white rounded-2xl overflow-hidden shadow-sm group transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg border border-gray-100">
                 <div className="relative h-52 w-full overflow-hidden">
@@ -717,49 +699,49 @@ export default function HomePage() {
       </section>
 
       {/* ============================ REGISTRATION ============================ */}
-      <section id="register" style={{ background: NAVY }} className="py-20">
+      <section id="register" style={{ background: SKY_LIGHT }} className="py-20">
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <Eyebrow dark>Registration</Eyebrow>
-            <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase text-white leading-tight mb-4">Ready to take the next step?</h2>
-            <p className="ty-body text-white/80 mb-6 max-w-md">Whether your player is picking up a bat for the first time or preparing for competitive cricket, there's a place for them at 22 Yards Dallas.</p>
-            <div className="h-px bg-white/15 mb-6 max-w-sm" />
-            <div className="ty-body text-white/70 text-sm mb-2">Prefer to talk it through?</div>
-            <div className="flex flex-wrap items-center gap-4 text-white font-bold">
+            <Eyebrow>Registration</Eyebrow>
+            <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase leading-tight mb-4" style={{ color: NAVY }}>Ready to take the next step?</h2>
+            <p className="ty-body mb-6 max-w-md" style={{ color: "#5B7A94" }}>Whether your player is picking up a bat for the first time or preparing for competitive cricket, there's a place for them at 22 Yards Dallas.</p>
+            <div className="h-px bg-gray-200 mb-6 max-w-sm" />
+            <div className="ty-body text-sm mb-2" style={{ color: "#5B7A94" }}>Prefer to talk it through?</div>
+            <div className="flex flex-wrap items-center gap-4 font-bold" style={{ color: NAVY }}>
               <a href="tel:+14692228473" className="flex items-center gap-2 transition-opacity hover:opacity-80">
-                <span className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: YELLOW }}><Phone size={14} color={NAVY_DEEPER} /></span>
+                <span className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: NAVY }}><Phone size={14} color="#fff" /></span>
                 +1 (469) 222-8473
               </a>
             </div>
           </div>
 
           {regSubmitted ? (
-            <div className="bg-emerald-500/20 border border-emerald-400 text-white rounded-2xl p-8 text-center ty-body">
+            <div className="bg-emerald-50 border border-emerald-300 text-emerald-900 rounded-2xl p-8 text-center ty-body shadow-sm">
               <h3 className="text-xl font-bold mb-2">Registration Submitted Successfully!</h3>
               <p className="text-sm opacity-90">Thank you for registering. Our team at 22Yards Dallas will contact you shortly.</p>
             </div>
           ) : (
-            <form className="bg-white/10 backdrop-blur rounded-2xl p-6 md:p-8 border border-white/10" onSubmit={handleRegSubmit}>
+            <form className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-md" onSubmit={handleRegSubmit}>
               <div className="grid sm:grid-cols-2 gap-4 mb-4">
                 <div>
-                  <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">First name *</label>
-                  <input required value={regForm.firstName} onChange={handleRegChange("firstName")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none text-gray-800" placeholder="First name" />
+                  <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>First name *</label>
+                  <input required value={regForm.firstName} onChange={handleRegChange("firstName")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy text-gray-800" placeholder="First name" />
                 </div>
                 <div>
-                  <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">Last name *</label>
-                  <input required value={regForm.lastName} onChange={handleRegChange("lastName")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none text-gray-800" placeholder="Last name" />
+                  <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>Last name *</label>
+                  <input required value={regForm.lastName} onChange={handleRegChange("lastName")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy text-gray-800" placeholder="Last name" />
                 </div>
                 <div>
-                  <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">Phone</label>
-                  <input type="tel" value={regForm.phone} onChange={handleRegChange("phone")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none text-gray-800" placeholder="(469) 222-8473" />
+                  <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>Phone</label>
+                  <input type="tel" value={regForm.phone} onChange={handleRegChange("phone")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy text-gray-800" placeholder="(469) 222-8473" />
                 </div>
                 <div>
-                  <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">Email *</label>
-                  <input type="email" required value={regForm.email} onChange={handleRegChange("email")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none text-gray-800" placeholder="you@example.com" />
+                  <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>Email *</label>
+                  <input type="email" required value={regForm.email} onChange={handleRegChange("email")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy text-gray-800" placeholder="you@example.com" />
                 </div>
                 <div>
-                  <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">Age group</label>
-                  <select value={regForm.ageGroup} onChange={handleRegChange("ageGroup")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none text-gray-800">
+                  <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>Age group</label>
+                  <select value={regForm.ageGroup} onChange={handleRegChange("ageGroup")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy text-gray-800 bg-white">
                     <option>Select a group</option>
                     <option>U11 — Basic</option>
                     <option>U13 — Intermediate</option>
@@ -767,8 +749,8 @@ export default function HomePage() {
                   </select>
                 </div>
                 <div>
-                  <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">Program</label>
-                  <select value={regForm.program} onChange={handleRegChange("program")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none text-gray-800">
+                  <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>Program</label>
+                  <select value={regForm.program} onChange={handleRegChange("program")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy text-gray-800 bg-white">
                     <option>Select a program</option>
                     <option>Junior development (Ages 5–16)</option>
                     <option>Senior high-performance (Ages 17+)</option>
@@ -777,55 +759,14 @@ export default function HomePage() {
                   </select>
                 </div>
               </div>
-              <label className="ty-body block text-xs font-bold uppercase text-white/70 mb-1.5">Notes</label>
-              <textarea value={regForm.notes} onChange={handleRegChange("notes")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none mb-5 text-gray-800" rows={3} placeholder="Anything we should know about your player?" />
-              <button type="submit" disabled={regLoading} className="ty-body w-full rounded-full py-3 text-sm font-bold uppercase tracking-wide cursor-pointer transition-transform hover:scale-[1.01]" style={{ background: YELLOW, color: NAVY_DEEPER }}>
+              <label className="ty-body block text-xs font-bold uppercase mb-1.5" style={{ color: NAVY }}>Notes</label>
+              <textarea value={regForm.notes} onChange={handleRegChange("notes")} className="w-full rounded-lg px-3 py-2.5 text-sm outline-none border border-gray-200 focus:border-navy mb-5 text-gray-800" rows={3} placeholder="Anything we should know about your player?" />
+              <button type="submit" disabled={regLoading} className="ty-body w-full rounded-full py-3 text-sm font-bold uppercase tracking-wide cursor-pointer transition-transform hover:scale-[1.01] shadow-sm" style={{ background: YELLOW, color: NAVY_DEEPER }}>
                 {regLoading ? "Submitting..." : "Register Now"}
               </button>
-              <div className="ty-body text-center text-white/60 text-xs mt-3">We'll get back to you within 24 hours.</div>
+              <div className="ty-body text-center text-xs mt-3" style={{ color: "#9AAEC0" }}>We'll get back to you within 24 hours.</div>
             </form>
           )}
-        </div>
-      </section>
-
-      {/* ============================ PROSHOP ============================ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <Eyebrow>ProShop</Eyebrow>
-            <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase mb-4" style={{ color: NAVY }}>Kit up. Play your best.</h2>
-            <p className="ty-body mb-6" style={{ color: "#5B7A94" }}>Bats, pads, gloves, shoes, and team gear — everything you need, picked by coaches who use it every day at 22Yards Dallas.</p>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {["Bats", "Protective gear", "Footwear", "Balls", "Team kit", "Accessories"].map((t) => <Pill key={t}>{t}</Pill>)}
-            </div>
-            <a href="#store" className="ty-body inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-bold uppercase tracking-wide" style={{ background: NAVY, color: "#fff" }}>
-              <ShoppingBag size={16} /> Shop now
-            </a>
-          </div>
-          <Photo src={IMG.cricketEquipment} alt="ProShop at 22 Yards Dallas" className="h-72 w-full" />
-        </div>
-      </section>
-
-      {/* ============================ FRANCHISE ============================ */}
-      <section style={{ background: YELLOW }} className="py-16 relative overflow-hidden">
-        <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-64 h-64 rounded-full opacity-30" style={{ background: "#fff" }} />
-        <div className="max-w-6xl mx-auto px-6 relative grid md:grid-cols-[1.4fr_1fr] gap-10 items-center">
-          <div>
-            <span className="ty-body text-xs font-bold tracking-widest uppercase" style={{ color: NAVY_DEEPER }}>Franchise opportunity</span>
-            <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase mt-2 mb-4" style={{ color: NAVY_DEEPER }}>Own the next cricket destination.</h2>
-            <p className="ty-body mb-6 max-w-lg" style={{ color: "#3B5C7A" }}>Build your own cricket academy with a proven indoor cricket model backed by the experience and results of 22 Yards Dallas — Texas's premier facility.</p>
-            <div className="flex gap-10">
-              {[["4.9★", "Google rating"], ["200+", "Reviews"], ["2,000+", "Monthly visitors"]].map(([n, l]) => (
-                <div key={l}>
-                  <div className="ty-display text-2xl font-bold" style={{ color: NAVY_DEEPER }}>{n}</div>
-                  <div className="ty-body text-[11px] font-semibold uppercase" style={{ color: "#3B5C7A" }}>{l}</div>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className="md:justify-self-end">
-            <OutlineButton icon={ArrowRight}>Explore franchise opportunity</OutlineButton>
-          </div>
         </div>
       </section>
 

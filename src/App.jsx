@@ -6,8 +6,6 @@ import ContactUs from './ContactUs';
 import LaneRentals from './LaneRentals';
 import SpecialEvents from './SpecialEvents';
 import SummerCamp from './SummerCamp';
-import RegistrationPage from './RegistrationPage';
-import RegistrationFormPage from './RegistrationFormPage';
 import StorePage from './StorePage';
 import GalleryPage from './GalleryPage';
 import OurTeamPage from './OurTeamPage';
@@ -23,11 +21,9 @@ import DurationSelectionPage from './DurationSelectionPage';
 export default function App() {
   const getPage = () => {
     if (window.location.hash === '#about') return 'about';
-    if (window.location.hash === '#coaching') return 'coaching';
+    if (window.location.hash === '#coaching' || window.location.hash === '#ska-registration') return 'coaching';
     if (window.location.hash === '#contact') return 'contact';
-    if (window.location.hash === '#store') return 'store';
     if (window.location.hash === '#gallery') return 'gallery';
-    if (window.location.hash === '#lane-rentals') return 'lane-rentals';
     if (window.location.hash === '#select-centre' || window.location.hash === '#centre') return 'select-centre';
     if (window.location.hash === '#book-a-lane' || window.location.hash === '#book-lane' || window.location.hash === '#book') return 'book-a-lane';
     if (window.location.hash === '#book-box-cricket') return 'book-box-cricket';
@@ -40,14 +36,6 @@ export default function App() {
     if (window.location.hash === '#privacy-policy' || window.location.hash === '#privacy') return 'privacy-policy';
     if (window.location.hash === '#special-events') return 'special-events';
     if (window.location.hash === '#summer-camp') return 'summer-camp';
-    if (window.location.hash === '#registration') return 'registration';
-    if (window.location.hash === '#registration-form') return 'registration-form';
-    if (
-      window.location.hash === '#our-team' ||
-      window.location.hash === '#team' ||
-      window.location.hash === '#coaches' ||
-      window.location.hash === '#ourteam'
-    ) return 'our-team';
     return 'home';
   };
 
@@ -82,9 +70,7 @@ export default function App() {
   if (page === 'about') return <AboutPage />;
   if (page === 'coaching') return <CoachingPage />;
   if (page === 'contact') return <ContactUs />;
-  if (page === 'store') return <StorePage />;
   if (page === 'gallery') return <GalleryPage />;
-  if (page === 'lane-rentals') return <LaneRentals />;
   if (page === 'select-centre') return <SelectCentrePage />;
   if (page === 'book-a-lane') return <BookALanePage />;
   if (page === 'book-box-cricket') return <PitchDateSelectionPage pitchType="box-cricket" />;
@@ -128,9 +114,6 @@ export default function App() {
   if (page === 'privacy-policy') return <PrivacyPolicyPage />;
   if (page === 'special-events') return <SpecialEvents />;
   if (page === 'summer-camp') return <SummerCamp />;
-  if (page === 'registration') return <RegistrationPage />;
-  if (page === 'registration-form') return <RegistrationFormPage />;
-  if (page === 'our-team') return <OurTeamPage />;
   return <HomePage />;
 }
 

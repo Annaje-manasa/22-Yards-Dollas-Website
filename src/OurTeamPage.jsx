@@ -158,7 +158,7 @@ const faqItems = [
   },
   {
     q: "Can parents watch their children during coaching sessions?",
-    a: "Yes, parents are welcome to observe their children during sessions. We believe in transparent coaching practices and encourage parental involvement to support the children's learning process",
+    a: "Yes, parents are welcome to observe their children during sessions. We believe in transparent coaching practices and encourage parental involvement to support the children's learning process.",
   },
   {
     q: "Are there opportunities for competitive play at 22Yards Dallas?",

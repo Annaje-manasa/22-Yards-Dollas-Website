@@ -6,6 +6,7 @@ import RentALaneBanner from "./RentALaneBanner";
 import heroCustom from "./assets/hero-custom-image.png";
 import crics1Img from "./assets/crics 1.jpeg";
 import crics4Img from "./assets/crics4.jpeg";
+import kidsBirthdayImg from "./assets/kids_birthday_party.jpg";
 
 const COLORS = {
   navy: "#0A5DA6",
@@ -22,12 +23,10 @@ const COLORS = {
 const navLinks = [
   "HOME",
   "ABOUT US",
-  "COACHING",
-  "LANE RENTALS",
   "SPECIAL EVENTS",
   "SUMMER CAMP",
   "CONTACT US",
-  "REGISTRATION",
+  "SKA REGISTRATION",
 ];
 
 const eventSections = [
@@ -76,52 +75,67 @@ const eventSections = [
     dark: false,
     imageSide: "left",
   },
+  {
+    image: "https://22-yards-five.vercel.app/_next/image?url=%2Fimages%2Fmezzanine-lounge.jpg&w=3840&q=75",
+    imageAlt: "Ladies, Stag, and Couples Nights at 22Yards Dallas",
+    title: "Ladies' / Stag / Couples Nights",
+    intro:
+      "Themed recurring nights featuring customized setup, music, and exclusive access for group celebrations and social gatherings.",
+    features: [
+      "Exclusive access to our mezzanine lounge and indoor entertainment space.",
+      "Customized setup with themed lighting, music, and audio-visual arrangements.",
+      "Dedicated group celebration packages tailored for social gatherings.",
+      "On-site refreshment options and private lounge seating.",
+    ],
+    dark: true,
+    imageSide: "right",
+  },
 ];
 
 const faqs = [
   {
-    q: "What types of events can I host at 22Yards Dallas?",
-    a: "You can host a variety of events at our facility, including birthday parties, corporate events, cricket tournaments, workshops, clinics, and private celebrations. Each event type can be customized to meet your specific needs and preferences.",
+    q: "How Long Does Cricket Coaching Last?",
+    a: "Each cricket coaching level at 22Yards Dallas (Level 1, Level 2, and Level 3) runs for a total of 12 weeks as a default. Most of our students transition to our semi-annual or annual package to continue their cricket journey.",
   },
   {
-    q: "How do I book an event at 22Yards Dallas?",
-    a: "Fill out the register form below or call our front desk with your preferred date and event type. Our team will confirm availability and walk you through setup options.",
+    q: "What will my child learn?",
+    a: "Our comprehensive curriculum covers all aspects of the game, including batting, bowling, fielding, wicket-keeping, and cricket-specific fitness exercises. On top of that, we focus on fostering a sense of community, where your child can make lasting friendships, develop strong communication skills, and even become a confident leader.",
   },
   {
-    q: "What facilities are available for events at 22Yards Dallas?",
-    a: "You'll have access to our indoor cricket lanes, open field areas, seating and gathering space, and flexible areas suited to presentations or catering.",
+    q: "How will my child progress?",
+    a: "Led by our experienced cricket coaching staff, your child will learn the essential fundamentals of the game, including cricket sport rules, and gradually progress to more advanced levels in Levels 2 and 3. Those who are ready to take their game to the next level can join our competitive cricket leagues at CricMax.",
   },
   {
-    q: "Can I bring my own food and beverages to the event?",
-    a: "Yes, you're welcome to bring your own catering, or choose from our on-site catering options — whichever fits your event best.",
+    q: "What equipment does my child need to start cricket coaching?",
+    a: "Beginners typically need basic cricket gear such as a bat, ball, and protective equipment. As they progress, we can advise on additional specialized equipment. Our ProShop at 22Yards Dallas stocks all necessary gear for cricketers at every level.",
   },
   {
-    q: "What equipment do I need to bring to training sessions?",
-    a: "Personal kit like your own bat and gloves is welcome, but not required — balls, stumps, and protective netting are provided on-site.",
+    q: "How often are the coaching sessions held?",
+    a: "Our coaching sessions are scheduled regularly throughout the week. We offer flexibility to accommodate the busy schedules of families, with options for weekend and weekday training.",
   },
   {
-    q: "Are there any age restrictions for participating in or attending events at 22Yards Dallas?",
-    a: "Our events welcome all ages. Some activities may be tailored by age group for safety, which we'll confirm with you during booking.",
+    q: "Can parents watch their children during coaching sessions?",
+    a: "Yes, parents are welcome to observe their children during sessions. We believe in transparent coaching practices and encourage parental involvement to support the children's learning process.",
   },
   {
-    q: "Do you provide event staff to assist during the event?",
-    a: "Yes, our staff can be on hand to help with setup, coordination, and running activities throughout your event.",
+    q: "Are there opportunities for competitive play at 22Yards Dallas?",
+    a: "Absolutely. Alongside coaching, we organize and participate in various leagues and tournaments, offering students the chance to experience competitive play and apply their skills in real match scenarios.",
   },
   {
-    q: "What is the cancellation policy for events at 22Yards Dallas?",
-    a: "Events can be rescheduled or cancelled free of charge up to 7 days before the date. Changes inside that window may be subject to a fee.",
+    q: "What makes 22Yards Dallas different from other cricket academies?",
+    a: "22Yards Dallas stands out for its state-of-the-art facilities, experienced coaching staff, and our holistic approach to training that focuses not just on cricket skills but also on physical fitness, mental resilience, and sportsmanship.",
   },
   {
-    q: "Can I schedule a tour of the facilities before booking an event?",
-    a: "Absolutely — reach out and we'll set up a time for you to walk through the facility before you commit to a date.",
+    q: "What is the path for a student player in the United States?",
+    a: "Our expert cricket coaching staff will work closely with your child to develop the skills and confidence they need to excel on the field. As the popularity of cricket continues to grow in the U.S., there are more opportunities than ever before for students who wish to continue with the sport. By starting with 22Yards Dallas, your child can be at the forefront of this exciting movement, rather than just watching from the sidelines.",
   },
   {
-    q: "What happens in case of bad weather during an outdoor event?",
-    a: "All of our lanes and core facilities are indoors and climate-controlled, so your event can proceed rain or shine.",
+    q: "Is there a future in cricket?",
+    a: "Cricket is rapidly gaining popularity in the United States, and for good reason. As more and more people from diverse backgrounds immigrate to the country, they bring with them their passion for the game. In fact, cricket is now one of the fastest-growing sports in the U.S. and is played by millions of people across the country. The future of cricket in the U.S. looks bright, with a growing number of youth leagues and tournaments being established every year. This means that your child can not only learn the fundamentals of the game but also have the opportunity to compete against other skilled players and teams. With the support of 22Yards Dallas’s expert coaching staff, your child can develop the skills and strategies needed to excel on the field and take their game to the next level. Even if your child doesn’t aspire to play cricket professionally, they can still enjoy the game for years to come. Cricket is a sport that fosters teamwork, discipline, and sportsmanship, and can help your child develop lifelong skills and values that extend beyond the field.",
   },
 ];
 
-const quickLinks = ["Home", "About Us", "Coaching", "Lane Rentals", "Summer Camp", "Special Events", "Gallery", "Contact Us"];
+const quickLinks = ["Home", "About Us", "Summer Camp", "Special Events", "Gallery", "Contact Us", "SKA Registration"];
 const legalLinks = ["Privacy Policy", "Terms of Use", "Disclaimer", "Waiver & Cancellations Policy"];
 
 export default function SpecialEvents() {
@@ -242,6 +256,7 @@ export default function SpecialEvents() {
         <EventSection key={sec.title} sec={sec} />
       ))}
 
+
       {/* Discover Facilities Section (Image 2) */}
       <DiscoverFacilitiesSection />
 
@@ -278,12 +293,12 @@ function EventSection({ sec }) {
   const imageFirst = sec.imageSide === "left";
 
   const imageBlock = (
-    <div className="relative min-h-[250px] sm:min-h-[340px] rounded-2xl overflow-hidden bg-[#0A5DA6]">
+    <div className="relative h-[280px] sm:h-[350px] md:h-[400px] w-full rounded-2xl overflow-hidden bg-[#0A5DA6]">
       <img
         src={sec.image}
         alt={sec.imageAlt}
         loading="lazy"
-        style={{ width: "100%", height: "100%", minHeight: 250, objectFit: "cover", display: "block" }}
+        className="w-full h-full object-cover block"
       />
       <div
         aria-hidden="true"
@@ -345,6 +360,7 @@ function EventSection({ sec }) {
     </div>
   );
 }
+
 
 function DiscoverFacilitiesSection() {
   const [hoveredIdx, setHoveredIdx] = useState(null);

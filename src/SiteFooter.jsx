@@ -3,30 +3,22 @@ import { useState } from "react";
 const quickLinks = [
   "Home",
   "About Us",
-  "Our Team",
-  "Coaching",
-  "Lane Rental",
   "Special Events",
   "Gallery",
   "Contact Us",
-  "Store",
-  "Registration",
+  "SKA Registration",
 ];
 const moreLinks = ["Privacy Policy", "Terms and Conditions", "Disclaimer", "FAQs", "Waiver & Cancellations Policy"];
 
 const linkHrefs = {
   "Home": "#",
   "About Us": "#about",
-  "Our Team": "#our-team",
   "Coaching": "#coaching",
-  "Lane Rental": "#lane-rentals",
-  "Lane Rentals": "#lane-rentals",
   "Special Events": "#special-events",
   "Summer Camp": "#summer-camp",
   "Contact Us": "#contact",
-  "Store": "#store",
-  "Registration": "https://docs.google.com/forms/d/e/1FAIpQLScPhKS-lx35asRIcnE8TSXLftCAkrbWK-n4BwTao9FKsxYNcA/viewform?usp=dialog",
   "Gallery": "#gallery",
+  "SKA Registration": "#coaching",
   "Franchise": "#",
   "FAQs": "#",
 };
@@ -127,9 +119,7 @@ export default function SiteFooter() {
               <div style={{ fontSize: 9, letterSpacing: 2, color: "#F6C915" }}>DALLAS</div>
             </div>
           </div>
-          <p style={{ fontSize: 13, lineHeight: 1.6, color: "#AEC3E6", maxWidth: 280 }}>
-            Established in 2022 in Dallas, 22Yards is a cutting-edge cricket facility focused on nurturing young talent. We offer a comprehensive development program for male and female players, aimed at fostering world-class skills and holistic growth for performance at the global level.”
-          </p>
+
           <div style={{ fontSize: 13, lineHeight: 1.9, marginTop: 12, color: "#AEC3E6" }}>
             <a href="https://maps.google.com/?q=2601+E+State+Hwy+121+Business,+Lewisville,+TX+75056" target="_blank" rel="noopener noreferrer" style={{ color: "#AEC3E6", textDecoration: "none", display: "block" }}>
               📍 2601 E State Hwy 121 Business, Lewisville, TX 75056
@@ -160,7 +150,7 @@ export default function SiteFooter() {
       </div>
 
       <div className="border-t border-white/12 py-5 flex flex-col sm:flex-row justify-between items-center gap-4 max-w-[1200px] mx-auto text-xs text-[#9DB4DA]">
-        <div>Designed and Managed by Engaze Digital</div>
+        <div>Designed and Managed by Margam360</div>
 
         <div className="text-center sm:text-right">
           <div>Copyright © 2024. All rights reserved.| GURUKRUPA SPORTS LLC</div>

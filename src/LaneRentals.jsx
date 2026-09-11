@@ -121,7 +121,7 @@ const bookingOptions = [
 const faqs = [
   {
     q: "How Long Does Cricket Coaching Last?",
-    a: "Each cricket coaching level at 22 Yards Dallas (Level 1, Level 2, and Level 3) runs for a total of 12 weeks as a default. Most of our students transition to our semi-annual or annual package to continue their cricket journey.",
+    a: "Each cricket coaching level at 22Yards Dallas (Level 1, Level 2, and Level 3) runs for a total of 12 weeks as a default. Most of our students transition to our semi-annual or annual package to continue their cricket journey.",
   },
   {
     q: "What will my child learn?",
@@ -141,7 +141,7 @@ const faqs = [
   },
   {
     q: "Can parents watch their children during coaching sessions?",
-    a: "Yes, parents are welcome to observe their children during sessions. We believe in transparent coaching practices and encourage parental involvement to support the children's learning process",
+    a: "Yes, parents are welcome to observe their children during sessions. We believe in transparent coaching practices and encourage parental involvement to support the children's learning process.",
   },
   {
     q: "Are there opportunities for competitive play at 22Yards Dallas?",
@@ -152,7 +152,7 @@ const faqs = [
     a: "22Yards Dallas stands out for its state-of-the-art facilities, experienced coaching staff, and our holistic approach to training that focuses not just on cricket skills but also on physical fitness, mental resilience, and sportsmanship.",
   },
   {
-    q: "What is the path for a student in cricket in the United States?",
+    q: "What is the path for a student player in the United States?",
     a: "Our expert cricket coaching staff will work closely with your child to develop the skills and confidence they need to excel on the field. As the popularity of cricket continues to grow in the U.S., there are more opportunities than ever before for students who wish to continue with the sport. By starting with 22Yards Dallas, your child can be at the forefront of this exciting movement, rather than just watching from the sidelines.",
   },
   {

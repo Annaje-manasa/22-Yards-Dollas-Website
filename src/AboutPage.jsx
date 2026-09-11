@@ -91,7 +91,7 @@ export default function AboutPage() {
   const faqs = [
     {
       q: "How Long Does Cricket Coaching Last?",
-      a: "Each cricket coaching level at 22 Yards Dallas (Level 1, Level 2, and Level 3) runs for a total of 12 weeks as a default. Most of our students transition to our semi-annual or annual package to continue their cricket journey.",
+      a: "Each cricket coaching level at 22Yards Dallas (Level 1, Level 2, and Level 3) runs for a total of 12 weeks as a default. Most of our students transition to our semi-annual or annual package to continue their cricket journey.",
     },
     {
       q: "What will my child learn?",
@@ -114,20 +114,20 @@ export default function AboutPage() {
       a: "Yes, parents are welcome to observe their children during sessions. We believe in transparent coaching practices and encourage parental involvement to support the children's learning process.",
     },
     {
-      q: "Are there opportunities for competitive play at 22 Yards Dallas?",
+      q: "Are there opportunities for competitive play at 22Yards Dallas?",
       a: "Absolutely. Alongside coaching, we organize and participate in various leagues and tournaments, offering students the chance to experience competitive play and apply their skills in real match scenarios.",
     },
     {
-      q: "What makes 22 Yards Dallas different from other cricket academies?",
+      q: "What makes 22Yards Dallas different from other cricket academies?",
       a: "22Yards Dallas stands out for its state-of-the-art facilities, experienced coaching staff, and our holistic approach to training that focuses not just on cricket skills but also on physical fitness, mental resilience, and sportsmanship.",
     },
     {
-      q: "What is the path for a student in cricket in the United States?",
+      q: "What is the path for a student player in the United States?",
       a: "Our expert cricket coaching staff will work closely with your child to develop the skills and confidence they need to excel on the field. As the popularity of cricket continues to grow in the U.S., there are more opportunities than ever before for students who wish to continue with the sport. By starting with 22Yards Dallas, your child can be at the forefront of this exciting movement, rather than just watching from the sidelines.",
     },
     {
       q: "Is there a future in cricket?",
-      a: "Cricket is rapidly gaining popularity in the United States, and for good reason. As more and more people from diverse backgrounds immigrate to the country, they bring with them their passion for the game. In fact, cricket is now one of the fastest-growing sports in the U.S. and is played by millions of people across the country. The future of cricket in the U.S. looks bright, with a growing number of youth leagues and tournaments being established every year.",
+      a: "Cricket is rapidly gaining popularity in the United States, and for good reason. As more and more people from diverse backgrounds immigrate to the country, they bring with them their passion for the game. In fact, cricket is now one of the fastest-growing sports in the U.S. and is played by millions of people across the country. The future of cricket in the U.S. looks bright, with a growing number of youth leagues and tournaments being established every year. This means that your child can not only learn the fundamentals of the game but also have the opportunity to compete against other skilled players and teams. With the support of 22Yards Dallas’s expert coaching staff, your child can develop the skills and strategies needed to excel on the field and take their game to the next level. Even if your child doesn’t aspire to play cricket professionally, they can still enjoy the game for years to come. Cricket is a sport that fosters teamwork, discipline, and sportsmanship, and can help your child develop lifelong skills and values that extend beyond the field.",
     },
   ];
 
@@ -220,41 +220,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============================ 2. WHAT WE OFFER ============================ */}
-      <section className="bg-white py-16 md:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <div className="flex justify-center"><Eyebrow>Our Coaching Approach</Eyebrow></div>
-          <h2 className="ty-display text-3xl sm:text-4xl md:text-5xl font-bold uppercase mb-4" style={{ color: NAVY }}>
-            What We Offer
-          </h2>
-          <p className="ty-body text-xs sm:text-sm text-slate-600 leading-relaxed max-w-3xl mx-auto">
-            Discover 22 Yards Dallas' unique cricket coaching approach. We provide a safe and engaging environment for children to learn and love cricket. Our sessions focus on building game knowledge, physical fitness, and social skills. With personalized attention and interactive sessions, we emphasize discipline, teamwork, and resilience. Our beginner and intermediate programs offer a balanced mix of training and gameplay, ensuring a comprehensive and enjoyable cricket experience.
-          </p>
-        </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          {offerCards.map((c) => (
-            <div key={c.title} className="bg-white rounded-2xl overflow-hidden shadow-sm border flex flex-col justify-between" style={{ borderColor: BORDER_COLOR }}>
-              <div>
-                <div className="aspect-[4/3] relative bg-slate-200 overflow-hidden">
-                  <img src={c.img} alt={c.title} className="w-full h-full object-cover" />
-                </div>
-                <div className="p-6 text-left">
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 rounded-xl flex items-center justify-center font-bold shadow-sm flex-shrink-0" style={{ background: NAVY, color: "#fff" }}>
-                      {c.icon}
-                    </div>
-                    <h3 className="ty-display font-bold text-lg sm:text-xl uppercase m-0 leading-tight" style={{ color: NAVY }}>
-                      {c.title}
-                    </h3>
-                  </div>
-                  <p className="ty-body text-xs sm:text-sm text-slate-600 leading-relaxed">{c.desc}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* ============================ 3. MEET OUR COACHING STAFF (EXPLICITLY KEPT) ============================ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-b" style={{ background: BG_SECTION, borderColor: BORDER_COLOR }}>
@@ -301,8 +267,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ============================ 4. RENT A LANE CTA ============================ */}
-      <RentALaneBanner />
+     
 
       {/* ============================ 5. FAQS SECTION ============================ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8" style={{ background: BG_SECTION }}>
