@@ -482,9 +482,9 @@ export default function HomePage() {
               <p className="ty-body text-white/75 text-sm mb-8">
                 Indoor Cricket Facility in Dallas, TX
               </p>
-              <div className="flex flex-wrap justify-start gap-4 mb-8">
-                <YellowButton href="#register">Enroll Now</YellowButton>
-                <OutlineButton icon={Calendar} dark href="#book-a-lane">Book a Lane</OutlineButton>
+              <div className="flex flex-row items-center justify-start gap-2.5 sm:gap-4 mb-8">
+                <YellowButton href="#register" className="px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm whitespace-nowrap">Enroll Now</YellowButton>
+                <OutlineButton icon={Calendar} dark href="#book-a-lane" className="px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm whitespace-nowrap">Book a Lane</OutlineButton>
               </div>
               <div className="h-px bg-white/20 mb-6 w-full" />
               <div className="ty-body flex flex-wrap justify-start items-center gap-x-8 gap-y-3 text-white/90 text-sm">
