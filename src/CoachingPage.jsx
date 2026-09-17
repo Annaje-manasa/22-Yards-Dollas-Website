@@ -25,7 +25,7 @@ import SiteFooter from "./SiteFooter";
 import SiteHeader from "./SiteHeader";
 import RentALaneBanner from "./RentALaneBanner";
 import coachingHeroImg from "./assets/crics3.jpeg";
-import crics1Img from "./assets/crics 1.jpeg";
+import crics1Img from "./assets/crics.jpg";
 import crics2Img from "./assets/crics 2.jpeg";
 import crics4Img from "./assets/crics4.jpeg";
 import weekendGroupImg from "./assets/weekend_group_coaching.jpg";

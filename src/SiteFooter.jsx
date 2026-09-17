@@ -1,4 +1,5 @@
 import { useState } from "react";
+import logoImg from "./assets/logo.png";
 
 const quickLinks = [
   "Home",
@@ -20,7 +21,11 @@ const linkHrefs = {
   "Gallery": "#gallery",
   "SKA Registration": "#coaching",
   "Franchise": "#",
-  "FAQs": "#",
+  "FAQs": "#faqs",
+  "Privacy Policy": "#privacy-policy",
+  "Terms and Conditions": "#terms-and-conditions",
+  "Disclaimer": "#disclaimer",
+  "Waiver & Cancellations Policy": "#waiver-and-cancellations-policy",
 };
 
 const footerLinkStyle = { color: "#9DB4DA", textDecoration: "none" };
@@ -112,13 +117,13 @@ export default function SiteFooter() {
     <footer className="bg-[#053A68] text-[#CBD9EF] px-5 sm:px-10 pt-10 sm:pt-12 pb-0 w-full overflow-hidden">
       <div className="grid grid-cols-2 lg:grid-cols-[1.6fr_1fr_1fr_1.3fr] gap-x-6 gap-y-8 max-w-[1200px] mx-auto pb-10">
         <div className="col-span-1">
-          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
-            <div style={{ width: 36, height: 36, background: "#0A5DA6", color: "#F6C915", borderRadius: 8, display: "flex", alignItems: "center", justifyContent: "center", fontWeight: 800, fontSize: 14 }}>22</div>
-            <div style={{ lineHeight: 1.1 }}>
-              <div style={{ fontWeight: 700, fontSize: 15, color: "#fff" }}>CRICS 22 YARDS</div>
-              <div style={{ fontSize: 9, letterSpacing: 2, color: "#F6C915" }}>DALLAS</div>
-            </div>
-          </div>
+          <a href="#" className="inline-block mb-4 no-underline bg-white rounded-lg p-1.5 shadow-sm">
+            <img
+              src={logoImg}
+              alt="22 Yards Dallas Logo"
+              className="h-10 sm:h-12 w-auto object-contain"
+            />
+          </a>
 
           <div style={{ fontSize: 13, lineHeight: 1.9, marginTop: 12, color: "#AEC3E6" }}>
             <a href="https://maps.google.com/?q=2601+E+State+Hwy+121+Business,+Lewisville,+TX+75056" target="_blank" rel="noopener noreferrer" style={{ color: "#AEC3E6", textDecoration: "none", display: "block" }}>

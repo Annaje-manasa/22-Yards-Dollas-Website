@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Phone, MapPin, Clock, Mail, Calendar, ArrowRight, CheckCircle2, Check,
   Target, Activity, Brain, Users, Award, Grid3x3, Gauge, Gamepad2,
@@ -8,10 +8,38 @@ import SiteFooter from "./SiteFooter";
 import SiteUtilityBar from "./SiteUtilityBar";
 import SiteHeader from "./SiteHeader";
 import RentALaneBanner from "./RentALaneBanner";
-import adVideo from "./assets/Ad Video 1-compressed.mp4";
-import crics1Img from "./assets/crics 1.jpeg";
+import crics1Img from "./assets/crics.jpg";
 import sachinImg from "./assets/sachin.png";
 import heroCustomImg from "./assets/hero-custom-image.png";
+import sliderImg1 from "./assets/slider/img1.jpeg";
+import sliderImg2 from "./assets/slider/img2.jpeg";
+import sliderImg3 from "./assets/slider/img3.jpeg";
+import sliderImg4 from "./assets/slider/img4.jpeg";
+import sliderImg5 from "./assets/slider/img5.jpeg";
+import sliderImg6 from "./assets/slider/img6.jpeg";
+import sliderImg7 from "./assets/slider/img7.jpeg";
+import sliderImg8 from "./assets/slider/img8.jpeg";
+import sliderImg9 from "./assets/slider/img9.jpeg";
+import sliderImg10 from "./assets/slider/img10.jpeg";
+import sliderImg11 from "./assets/slider/img11.jpeg";
+import sliderImg12 from "./assets/slider/img12.jpeg";
+import sliderImg13 from "./assets/slider/img13.jpeg";
+
+const sampleImages = [
+  sliderImg1,
+  sliderImg2,
+  sliderImg3,
+  sliderImg4,
+  sliderImg5,
+  sliderImg6,
+  sliderImg7,
+  sliderImg8,
+  sliderImg9,
+  sliderImg10,
+  sliderImg11,
+  sliderImg12,
+  sliderImg13,
+];
 
 /* ------------------------------------------------------------------ */
 /*  Design tokens — sampled from the reference site                    */
@@ -194,6 +222,109 @@ function GroupCoachingCards() {
 /* ------------------------------------------------------------------ */
 /*  Page                                                               */
 /* ------------------------------------------------------------------ */
+function HeroVideo() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 1800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="relative w-full h-[380px] md:h-[460px] rounded-2xl overflow-hidden shadow-2xl border-2 select-none bg-[#053a68]" style={{ borderColor: "rgba(233,210,34,0.3)" }}>
+      <iframe
+        className={`absolute w-[150%] h-[150%] -top-[25%] -left-[25%] object-cover pointer-events-none transition-opacity duration-1000 ${showVideo ? "opacity-100" : "opacity-0"
+          }`}
+        style={{ pointerEvents: "none" }}
+        src="https://www.youtube.com/embed/vqe52-yLvhI?autoplay=1&mute=1&loop=1&playlist=vqe52-yLvhI&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&iv_load_policy=3&autohide=1&playsinline=1"
+        title="22Yards Dallas Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+      <div className="absolute inset-0 z-30 pointer-events-auto" />
+    </div>
+  );
+}
+
+function ChampionsVideo() {
+  const [showVideo, setShowVideo] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowVideo(true);
+    }, 1800);
+    return () => clearTimeout(timer);
+  }, []);
+
+  return (
+    <div className="relative w-full h-[360px] md:h-[420px] rounded-2xl overflow-hidden shadow-2xl border-2 select-none bg-[#053a68]" style={{ borderColor: "rgba(233,210,34,0.3)" }}>
+      <iframe
+        className={`absolute w-[150%] h-[150%] -top-[25%] -left-[25%] object-cover pointer-events-none transition-opacity duration-1000 ${showVideo ? "opacity-100" : "opacity-0"
+          }`}
+        style={{ pointerEvents: "none" }}
+        src="https://www.youtube.com/embed/HLDpvz0Hub4?autoplay=1&mute=1&loop=1&playlist=HLDpvz0Hub4&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&iv_load_policy=3&autohide=1&playsinline=1"
+        title="22Yards Dallas Champions Video"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowFullScreen
+      />
+      <div className="absolute inset-0 z-30 pointer-events-auto" />
+    </div>
+  );
+}
+
+function Section1ImageSlider({ images }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 2500);
+    return () => clearTimeout(timer);
+  }, [images.length]);
+
+  return (
+    <div className="w-full flex flex-col gap-3">
+      {/* Main Image Box */}
+      <div className="relative w-full h-[400px] sm:h-[480px] md:h-[500px] select-none overflow-hidden rounded-2xl bg-white">
+        {images.map((imgSrc, idx) => (
+          <img
+            key={idx}
+            src={imgSrc}
+            alt={`22Yards Dallas Slide ${idx + 1}`}
+            className={`absolute inset-0 w-full h-full object-contain rounded-2xl transition-all duration-700 ease-in-out ${
+              idx === currentIndex
+                ? "opacity-100 scale-100 z-10"
+                : "opacity-0 scale-95 z-0"
+            }`}
+            loading="lazy"
+          />
+        ))}
+      </div>
+
+      {/* Centered Dots indicator below the image */}
+      <div className="flex justify-center items-center px-2 pt-1">
+        <div className="flex items-center gap-1.5 max-w-[280px] overflow-x-auto py-1">
+          {images.map((_, idx) => (
+            <button
+              key={idx}
+              type="button"
+              onClick={() => setCurrentIndex(idx)}
+              className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
+                idx === currentIndex
+                  ? "w-5 bg-[#F6C915]"
+                  : "w-2 bg-slate-300 hover:bg-slate-400"
+              }`}
+              aria-label={`Go to image ${idx + 1}`}
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [regForm, setRegForm] = useState({
@@ -271,7 +402,7 @@ export default function HomePage() {
   ];
 
   const coaches = [
-    { name: "Vardhan Vundavalli", role: "Expert Mentor", img: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg" },
+    { name: "Vardhan Vundavalli", role: "Expert Mentor" },
     { name: "Head Coach", role: "Lead Batting Coach" },
     { name: "Bowling Coach", role: "Pace & Spin Specialist" },
   ];
@@ -307,7 +438,7 @@ export default function HomePage() {
       img: IMG.mezzanineLounge,
       badge: "🍸 Nights",
     },
-    
+
   ];
 
   const gallery = [
@@ -363,16 +494,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Image */}
-            <div className="relative w-full h-[380px] md:h-[460px] rounded-2xl overflow-hidden shadow-2xl border-2" style={{ borderColor: "rgba(233,210,34,0.3)" }}>
-              <img
-                src={heroCustomImg}
-                alt="22Yards Dallas Indoor Cricket Facility"
-                className="w-full h-full object-cover"
-                loading="eager"
-              />
-              <div className="absolute inset-0 pointer-events-none" style={{ background: "linear-gradient(to top, rgba(5,58,104,0.6) 0%, transparent 60%)" }} />
-            </div>
+            {/* Right Video */}
+            <HeroVideo />
           </div>
         </div>
       </section>
@@ -398,14 +521,9 @@ export default function HomePage() {
       {/* ============================ SECTION 1: WELCOME TO 22YARDS DALLAS ============================ */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6 md:px-10 grid md:grid-cols-12 gap-10 items-center">
-          {/* Left — image */}
+          {/* Left — image slider */}
           <div className="md:col-span-5">
-            <img
-              src={crics1Img}
-              alt="22Yards Dallas Cricket Training"
-              className="w-full h-auto rounded-2xl shadow-md"
-              loading="lazy"
-            />
+            <Section1ImageSlider images={sampleImages} />
           </div>
 
           {/* Right — content */}
@@ -498,7 +616,7 @@ export default function HomePage() {
               Step into Texas's premier cricket destination. Our state-of-the-art facility combines cutting-edge technology with world-class coaching to create an unparalleled training environment. From professional-grade pitches to advanced analytics, every element is designed to elevate your game to international standards.
             </p>
           </div>
-          <Photo src={IMG.battingAction} alt="22Yards Dallas Champions" className="h-96 w-full" />
+          <ChampionsVideo />
         </div>
       </section>
 
@@ -524,30 +642,7 @@ export default function HomePage() {
       </section>
 
       {/* ============================ MORE THAN A GAME ============================ */}
-      <section className="pb-20 pt-20 bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-          <SectionHeading eyebrow="Why cricket" title="More than a game"
-            sub="At 22Yards Dallas, we believe cricket teaches invaluable life lessons. Our holistic approach creates confident players ready to face global challenges." />
 
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="w-full">
-              <img src={IMG.juniorTraining} alt="Why cricket - More than a game at 22Yards Dallas" className="w-full h-auto rounded-2xl shadow-sm" loading="lazy" />
-            </div>
-
-            <div className="grid sm:grid-cols-2 gap-x-5 gap-y-6">
-              {whyCricket.map((f) => (
-                <div key={f.title} className="border border-gray-100 rounded-xl p-6 shadow-sm">
-                  <div className="w-11 h-11 rounded-lg flex items-center justify-center mb-4" style={{ background: NAVY }}>
-                    <f.icon size={20} color="#fff" />
-                  </div>
-                  <div className="ty-display font-semibold uppercase text-sm mb-2" style={{ color: NAVY }}>{f.title}</div>
-                  <p className="ty-body text-sm leading-relaxed" style={{ color: "#6B8399" }}>{f.text}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============================ FIND THE RIGHT GROUP ============================ */}
       <section className="py-20 bg-white">
@@ -568,32 +663,7 @@ export default function HomePage() {
       <RentALaneBanner id="book" />
 
       {/* ============================ TRAIN WITHOUT LIMITS ============================ */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <Eyebrow>Why train indoors</Eyebrow>
-            <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase mb-4" style={{ color: NAVY }}>Train without limits</h2>
-            <p className="ty-body mb-6" style={{ color: "#5B7A94" }}>Texas weather shouldn't decide when you train. A controlled indoor environment means every session counts — all year round.</p>
-            <div className="grid sm:grid-cols-2 gap-4">
-              {[
-                "Practice consistently, week after week",
-                "Improve technique with instant feedback",
-                "Train year-round in any weather",
-                "Use professional bowling machines",
-                "Work on specific, targeted skills",
-                "Practice with your teammates",
-              ].map((t) => (
-                <div key={t} className="flex items-start gap-2 rounded-xl p-4" style={{ background: SKY_LIGHT }}>
-                  <CheckCircle2 size={18} style={{ color: NAVY, flexShrink: 0, marginTop: 1 }} />
-                  <span className="ty-body text-sm" style={{ color: NAVY_DEEPER }}>{t}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-          <Photo src={IMG.seniorNets} alt="Indoor training session at 22 Yards Dallas" className="h-96 w-full" />
-        </div>
-      </section>
-
+     
       {/* ============================ MEET THE COACHES ============================ */}
       <section style={{ background: SKY_LIGHT }} className="py-20">
         <div className="max-w-6xl mx-auto px-6">
@@ -688,9 +758,7 @@ export default function HomePage() {
               <h2 className="ty-display text-3xl md:text-4xl font-bold uppercase mb-3" style={{ color: NAVY }}>Inside 22 Yards Dallas</h2>
               <p className="ty-body" style={{ color: "#5B7A94" }}>Training, players, coaches, the facility, and the events we host.</p>
             </div>
-            <a href="#gallery" className="no-underline">
-              <OutlineButton icon={ArrowRight} href="#gallery">View full gallery</OutlineButton>
-            </a>
+            <OutlineButton icon={ArrowRight} href="#gallery">View full gallery</OutlineButton>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {gallery.map((g, i) => <Photo key={i} src={g.src} alt={g.alt} className="h-40 w-full" />)}

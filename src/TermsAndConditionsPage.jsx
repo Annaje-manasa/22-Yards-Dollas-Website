@@ -1,7 +1,7 @@
 import React from "react";
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
-import { Shield, FileText, X, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { FileText, X } from "lucide-react";
 
 export function TermsModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -9,11 +9,10 @@ export function TermsModal({ isOpen, onClose }) {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
       <div className="bg-white rounded-xl max-w-3xl w-full max-h-[85vh] flex flex-col shadow-2xl overflow-hidden border border-gray-200">
-        {/* Modal Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200 bg-[#0A5DA6] text-white">
           <div className="flex items-center gap-2 font-bold text-base sm:text-lg" style={{ fontFamily: "'Inter', sans-serif" }}>
             <FileText size={20} className="text-[#F6C915]" />
-            Terms & Conditions &bull; 22Yards Dallas
+            Terms &amp; Conditions &bull; 22Yards Dallas
           </div>
           <button
             onClick={onClose}
@@ -24,12 +23,15 @@ export function TermsModal({ isOpen, onClose }) {
           </button>
         </div>
 
-        {/* Modal Body - Scrollable Terms Text */}
         <div className="p-6 overflow-y-auto space-y-6 text-sm text-[#334155] leading-relaxed" style={{ fontFamily: "'Inter', sans-serif" }}>
-          <TermsContentBody />
+          <div className="space-y-4">
+            <h2 className="text-xl font-bold text-[#053a68]">Terms Of USe &bull; 22Yards Dallas</h2>
+            <p>Welcome to 22Yards Dallas!</p>
+            <p>These terms and conditions outline the rules and regulations for the use of 22Yards Dallas's Website, located at https://22yardsdallas.com.</p>
+            <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use 22Yards Dallas if you do not agree to take all of the terms and conditions stated on this page.</p>
+          </div>
         </div>
 
-        {/* Modal Footer */}
         <div className="px-6 py-4 border-t border-gray-200 bg-gray-50 flex items-center justify-between flex-wrap gap-3">
           <a
             href="https://22yardsdallas.spawtz.com/TermsAndConditions?VenueId=2&Type=Booking"
@@ -51,151 +53,194 @@ export function TermsModal({ isOpen, onClose }) {
   );
 }
 
-export function TermsContentBody() {
-  return (
-    <div className="space-y-6 text-left">
-      {/* Title Header */}
-      <div className="text-center pb-4 border-b border-gray-100">
-        <h2 className="text-xl font-extrabold text-[#053a68] uppercase tracking-wide mb-1">
-          RELEASE AND WAIVER OF LIABILITY
-        </h2>
-        <p className="text-xs text-gray-500 font-medium m-0">
-          Gurukrupa Sports LLC d/b/a 22Yards Sports Academy &bull; Lewisville, TX
-        </p>
-      </div>
-
-      {/* Release & Waiver Text */}
-      <div className="space-y-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
-        <p>
-          The individual named on registration (referred to as <strong>"I"</strong> or <strong>"me"</strong>) desires to participate in indoor sports activities, including, but not limited to, indoor cricket and indoor soccer (the <strong>"Activities"</strong>), provided by <strong>Gurukrupa Sports LLC d/b/a 22Yards Sports Academy</strong> (the <strong>"Company"</strong>) at 2601 E State Hwy 121 Business, Lewisville, TX 75056 (the <strong>"Facility"</strong>). As lawful consideration for permission by the Company to participate in the Activities and for the intangible value that I will gain by participating in the Activities, I agree to all the terms and conditions set forth in this agreement (this <strong>"Agreement"</strong>).
-        </p>
-        <p className="font-semibold text-gray-800 bg-yellow-50/80 p-3 rounded border-l-4 border-[#F6C915]">
-          I AM AWARE OF AND UNDERSTAND THE NATURE OF THE ACTIVITIES, WHICH INCLUDES PHYSICAL CONTACT WITH OTHER PARTICIPANTS AND VIGOROUS CARDIOVASCULAR EXERCISE, AND THAT I AM IS QUALIFIED, IN GOOD HEALTH, AND IN PROPER PHYSICAL CONDITION TO PARTICIPATE IN SUCH ACTIVITY. I AM AWARE AND UNDERSTAND THAT THE ACTIVITIES ARE DANGEROUS ACTIVITIES AND INVOLVE SERIOUS RISKS, INCLUDING BUT NOT LIMITED TO, SPRAINS, FRACTURES, CONCUSSIONS, PARALYSIS, PERMANENT DISABILITY, SERIOUS INJURY, DEATH, AND PROPERTY DAMAGE. I ACKNOWLEDGE THAT ANY INJURIES THAT I SUSTAIN MAY BE COMPOUNDED BY NEGLIGENT EMERGENCY RESPONSE OR RESCUE OPERATIONS OF THE COMPANY. I ACKNOWLEDGE THAT I AM KNOWINGLY AND VOLUNTARILY PARTICIPATING IN THE ACTIVITIES WITH AN EXPRESS UNDERSTANDING OF THE DANGER INVOLVED AND HEREBY AGREE TO ACCEPT AND ASSUME ANY AND ALL RISKS OF INJURY, DEATH, OR PROPERTY DAMAGE, WHETHER CAUSED BY THE NEGLIGENCE OF THE COMPANY OR OTHERWISE.
-        </p>
-        <p>
-          I hereby expressly waive and release any and all claims, now known or hereafter known, against the Company, its officers, directors, employees, agents, affiliates, members, successors, and assigns (collectively, <strong>"Releasees"</strong>), on account of injury, death, or property damage arising out of or relating to my participation in the Activities or use of the facility, whether araising out of the negligence of the company or any releases (excluding gross negligence or intentional misconduct on the part of the company or its releasees) or the negligent or intentional conduct of other participants or spectators, or otherwise. I covenant not to make or bring any such claim against the company or any other releasee, and forever release and discharge the company or other releasees from liability under such claims.
-        </p>
-        <p>
-          I shall defend, indemnify, and hold harmless the Company and all other Releasees against any and all losses, damages, liabilities, deficiencies, claims, actions, judgments, settlements, interest, awards, penalties, fines, costs, or expenses of whatever kind, including reasonable attorney fees, fees and the costs of enforcing any right to indemnfication under this agreement, and the cost of pursuing any insurance providers, incurred by or awarded against indemnfied party, arising out of or resulting from any claim of a third party related to my participation in the activities.
-        </p>
-        <p>
-          This Agreement constitutes the entire agreement of the Company and me with respect to the subject matter contained herein and supersedes all prior and contemporaneous understandings, agreements, representations, and warranties, both written and oral, with respect to such subject matter. I acknowledge and agree that no representations or agreements, written or oral, have been made to me by the company or any other Releasee with respect to any of the subject matter contained in this agreement, and I represent and warrant that I am not relying on any such representations. If any term or provision of this Agreement or the application thereof to any party or circumstance is held invalid, illegal, or unenforceable to any extent in any jurisdiction, then the remaining terms and provisions and their application to other parties or circumstances shall not be affected thereby and shall be enforced to the greatest extent permitted by law. This Agreement is binding on and shall inure to the benefit of the Company and me and their respective successors and assigns. All matters arising out of or relating to this Agreement shall be governed by and construed in accordance with the internal laws of the State of Texas, excluding any conflict-of-laws rule or principle that might refer the governance or the construction of this agreement to the laws of another jurisdiction. Any claim or cause of action arising under this Agreement may be brought only in the federal and state courts located in Collin County, Texas and I hereby consent to the exclusive jurisdiction of such courts. If any action at law or in equity is necessary to enforce the terms of this Agreement, the prevailing party shall be entitled to receive from the non-prevailing party reasonable attorneys’ fees, court costs, and necessary disbursements in addition to all other relief to which he or it may be entitled.
-        </p>
-        <p className="font-bold text-gray-900 leading-relaxed">
-          BY REGISTERING, I ACKNOWLEDGE THAT I HAVE READ AND FULLY UNDERSTOOD ALL OF THE TERMS OF THIS AGREEMENT AND THAT I AM VOLUNTARILY GIVING UP SUBSTANTIAL LEGAL RIGHTS, INCLUDING THE RIGHT TO SUE THE COMPANY, WITHOUT ANY INDUCEMENT, ASSURANCE, OR GUARANTEE BEING MADE TO ME. I INTEND MY SIGNATURE TO BE THE REQUIRED EVIDENCE OF MY ASSENT TO COMPLETELY AND UNCONDITIONALLY RELEASE ALL LIABILITY TO THE GREATEST EXTENT ALLOWED BY LAW.
-        </p>
-        <p className="font-medium text-gray-800 leading-relaxed">
-          I am the parent or legal guardian of the minor named on the registration form. I have the legal capacity to consent to and, by registering, I hereby do consent to the terms and conditions of this Release and Waiver of Liability and Assumption of Risk on behalf of my child or ward.
-        </p>
-      </div>
-
-      {/* Cancellations, Refunds & Make-ups */}
-      <div className="pt-4 border-t border-gray-200">
-        <h3 className="text-lg font-bold text-[#053a68] uppercase mb-3 flex items-center gap-2">
-          <CheckCircle2 size={18} className="text-[#0A5DA6]" />
-          CANCELLATIONS, REFUNDS &amp; MAKE-UPS
-        </h3>
-        <ol className="list-decimal pl-5 space-y-2 text-xs sm:text-sm text-gray-700 leading-relaxed">
-          <li>
-            22Yards Sports Academy reserves the right, prior to the first class or after, to cancel a course due to insufficient enrollment, with full refund.
-          </li>
-          <li>
-            Cancelation rental booking of a field / batting lanes should be informed to the arena prior 24 hours of the booking time. NO refund is applicable. Credits will be given to customers if the cancelation is informed prior 24 hours and the booking can be done for another date within 30 days subject to availability.
-
-          </li>
-          <li>
-            Requests for program refunds must be submitted one week before the first day of the session is scheduled to begin.All refunds will incur a $25.00 administrative fee unless you go to the 1st class. Absolutely NO REFUNDS will be given after the first day of a session.NO EXCEPTIONS!
-
-          </li>
-          <li>
-            Under certain circumstances, class credit will be issued for a future session and must be coordinated and approved by a manager.Only the unused portion will be credited based on the date of the withdrawal and notification. Only for child illness.
-
-          </li>
-          <li>
-            22Yards Sports Academy are responsible for make-up classes only if a cancellation is due to the absence of an instructor or the closing of a facility.Unfortunately, we do not offer make-ups for vacation or summer camp programs.
-
-          </li>
-          <li>
-            Make-up classes are offered as a <strong>COURTSEY</strong> and must be scheduled in advance.All make-ups are based on class availability and must be completed during the session in which the participant is enrolled.
-
-          </li>
-          <li>
-            If your child has been attending classes without payment of class fee or registration fee, 22Yards Sports Academy reserves the right to process payment from the credit card information on file.
-          </li>
-        </ol>
-
-        <div className="mt-4 space-y-2 text-xs sm:text-sm text-gray-700 leading-relaxed">
-          <p className="font-bold text-gray-900 text-sm sm:text-base">
-            I understand and comply with the rules and regulations described above.
-          </p>
-          <p>
-            By registering, you also agree to receive emails from 22Yards Sports Academy. I accept the terms &amp; conditions.
-          </p>
-          <p>
-            Remember my information for the next registration. IMPORTANT: Do not check this on a public computer!
-          </p>
-        </div>
-      </div>
-
-      {/* Appearance Release */}
-      <div className="pt-4 border-t border-gray-200">
-        <h3 className="text-lg font-bold text-[#053a68] uppercase mb-3">
-          APPEARANCE RELEASE
-        </h3>
-        <div className="space-y-3 text-xs sm:text-sm text-gray-700 leading-relaxed">
-          <p>
-            I irrevocably give Gurukrupa Sports LLC d/b/a 22Yards Sports Academy, a Texas limited liability company (the &quot;Company&quot;), and its officers, directors, employees, agents, affiliates, members, successors, and assigns (collectively, &quot;Releasees&quot;) my permission, and grant to Releasees the right, to film, record, and photograph me during my participation in activities at the Company&apos;s indoor sports facility (the &quot;Recordings&quot;). I hereby irrevocably grant and license to Releasees the rights to use, and permit others to use, the Recordings, including my name, image, likeness, appearance, and voice as they appear in the Recordings, in perpetuity throughout the universe and in any medium or format whatsoever now existing or hereafter created, without further consent from or any royalty, payment, or other compensation to me except as otherwise expressly provided in this Agreement.
-          </p>
-          <p>
-            Further, I hereby irrevocably permit, authorize, and license Releasees to identify me by name and use my name, likeness, appearance, voice, professional and personal biographical information, signature, other personal characteristics, and all materials created by or on behalf of Company that incorporate any of the foregoing (&quot;Materials&quot;), in connection with the advertising, publicity, and promotion of Company and its affiliates and their businesses, products, and services, in perpetuity throughout the universe and in any medium or format whatsoever now existing or hereafter created without further consent from or any royalty, payment, or other compensation to me. I represent that I have not given any money or anything else of value to Releasees, or anyone else associated with the Recordings, in exchange for appearing in the Recordings or acknowledging me or including my name or any matter in the Recordings.
-          </p>
-          <p>
-            I agree that Company is and will be the sole and exclusive owner of all right, title, and interest in and to the Recordings and the Materials, including all copyrights and other intellectual property rights therein, in perpetuity throughout the universe. In furtherance of the foregoing, I agree that the results and proceeds of my services in connection with the Recordings and the Materials are work made for hire for Company as defined in Section 101 of the Copyright Act of 1976. To the extent the Recordings, the Materials, or any part of either does not qualify as, or otherwise fails to be, work made for hire, I shall, and hereby do, (a) assign, transfer, and otherwise convey to Company, irrevocably and in perpetuity, throughout the universe, all of my right, title, and interest in and to, if any, the Recordings and the Materials, including all copyright and other intellectual property rights, including all registration, renewal, and reversion rights, and the right to register and sue to enforce such copyrights against infringers; and (b) irrevocably waive any and all claims I may now or hereafter have in any jurisdiction to so-called &quot;moral rights&quot; or rights of droit moral in the Recordings and the Materials.
-          </p>
-          <p>
-            I acknowledge and agree that I have no right to review or approve the Recordings or the Materials before they are used by Company or at any other time, and that Releasees have no liability to me for any editing or alteration of the Recordings or the Materials, or for any distortion or other effects resulting from Company&apos;s editing, alteration, or use of the Recordings or the Materials, or Company&apos;s presentation of me. Any acknowledgment or credit of me in connection with the Work or the Materials, if any, shall be determined by Company in Company&apos;s sole discretion.
-          </p>
-          <p>
-            To the fullest extent permitted by applicable law, I hereby irrevocably waive all legal and equitable rights relating to all liabilities, claims, demands, actions, suits, damages, and expenses, now known or hereafter known in any jurisdiction throughout the world arising directly or indirectly from the Releasees&apos; exercise of their rights under this Agreement or the use of the Recordings and/or the Materials, and, whether resulting in whole or in part by the negligence of Releasees, covenant not to make or bring any claim against any Releasees and their agents, employees, and representatives, and forever release and discharge Releasees from liability under such claims.
-          </p>
-          <p className="font-bold text-gray-900">
-            I am the parent or legal guardian of the minor named on the registration form. I have the legal capacity to consent to and, by registering, I hereby do consent to the terms and conditions of this APPEARANCE RELEASE FORM on behalf of my child or ward.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
-
 export default function TermsAndConditionsPage() {
   return (
-    <div className="min-h-screen bg-white flex flex-col justify-between" style={{ fontFamily: "'Inter', sans-serif", color: "#0A5DA6" }}>
-      <div>
-        <SiteHeader activePage="ABOUT US" />
+    <div className="min-h-screen bg-white flex flex-col justify-between" style={{ fontFamily: "'Inter', sans-serif" }}>
+      <SiteHeader />
 
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-14 w-full">
-          <div className="mb-6">
-            <a
-              href="#selection-summary"
-              onClick={(e) => {
-                e.preventDefault();
-                if (window.history.length > 1) {
-                  window.history.back();
-                } else {
-                  window.location.hash = "#selection-summary";
-                }
-              }}
-              className="text-xs font-semibold text-[#0A5DA6] hover:text-[#053a68] flex items-center gap-1 no-underline bg-[#EEF5FB] px-3 py-1.5 rounded-md transition-colors inline-flex cursor-pointer"
-            >
-              <ArrowLeft size={14} /> Back to Booking
-            </a>
-          </div>
+      <main className="max-w-7xl mx-auto px-6 sm:px-10 py-12 sm:py-16 text-[#333333] leading-relaxed">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center text-[#1A1A1A] mb-8">
+          Terms and Conditions
+        </h1>
 
-          <div className="bg-white border border-gray-200 rounded-xl p-6 sm:p-10 shadow-sm">
-            <TermsContentBody />
-          </div>
-        </main>
-      </div>
+        <p className="text-sm sm:text-base text-gray-700 mb-4">
+          Welcome to 22Yards Dallas!
+        </p>
+
+        <p className="text-sm sm:text-base text-gray-700 mb-4">
+          These terms and conditions outline the rules and regulations for the use of 22Yards Dallas's Website, located at https://22yardsdallas.com.
+        </p>
+
+        <p className="text-sm sm:text-base text-gray-700 mb-4">
+          By accessing this website we assume you accept these terms and conditions. Do not continue to use 22Yards Dallas if you do not agree to take all of the terms and conditions stated on this page.
+        </p>
+
+        <p className="text-sm sm:text-base text-gray-700 mb-8">
+          The following terminology applies to these Terms and Conditions, Privacy Statement and Disclaimer Notice and all Agreements: &quot;Client&quot;, &quot;You&quot; and &quot;Your&quot; refers to you, the person log on this website and compliant to the Company’s terms and conditions. &quot;The Company&quot;, &quot;Ourselves&quot;, &quot;We&quot;, &quot;Our&quot; and &quot;Us&quot;, refers to our Company. &quot;Party&quot;, &quot;Parties&quot;, or &quot;Us&quot;, refers to both the Client and ourselves. All terms refer to the offer, acceptance and consideration of payment necessary to undertake the process of our assistance to the Client in the most appropriate manner for the express purpose of meeting the Client’s needs in respect of provision of the Company’s stated services, in accordance with and subject to, prevailing law of Netherlands. Any use of the above terminology or other words in the singular, plural, capitalization and/or he/she or they, are taken as interchangeable and therefore as referring to same.
+        </p>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            Cookies
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            We employ the use of cookies. By accessing 22Yards Dallas, you agreed to use cookies in agreement with the 22Yards Dallas's Privacy Policy.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700">
+            Most interactive websites use cookies to let us retrieve the user’s details for each visit. Cookies are used by our website to enable the functionality of certain areas to make it easier for people visiting our website. Some of our affiliate/advertising partners may also use cookies.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            License
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            Unless otherwise stated, 22Yards Dallas and/or its licensors own the intellectual property rights for all material on 22Yards Dallas. All intellectual property rights are reserved. You may access this from 22Yards Dallas for your own personal use subjected to restrictions set in these terms and conditions.
+          </p>
+          <p className="text-sm sm:text-base font-semibold text-gray-800 mb-2">
+            You must not:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm sm:text-base text-gray-700 mb-4">
+            <li>Republish material from 22Yards Dallas</li>
+            <li>Sell, rent or sub-license material from 22Yards Dallas</li>
+            <li>Reproduce, duplicate or copy material from 22Yards Dallas</li>
+            <li>Redistribute content from 22Yards Dallas</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            This Agreement shall begin on the date hereof.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            Parts of this website offer an opportunity for users to post and exchange opinions and information in certain areas of the website. 22Yards Dallas does not filter, edit, publish or review Comments prior to their presence on the website. Comments do not reflect the views and opinions of 22Yards Dallas,its agents and/or affiliates. Comments reflect the views and opinions of the person who post their views and opinions. To the extent permitted by applicable laws, 22Yards Dallas shall not be liable for the Comments or for any liability, damages or expenses caused and/or suffered as a result of any use of and/or posting of and/or appearance of the Comments on this website.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            22Yards Dallas reserves the right to monitor all Comments and to remove any Comments which can be considered inappropriate, offensive or causes breach of these Terms and Conditions.
+          </p>
+          <p className="text-sm sm:text-base font-semibold text-gray-800 mb-2">
+            You warrant and represent that:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm sm:text-base text-gray-700 mb-4">
+            <li>You are entitled to post the Comments on our website and have all necessary licenses and consents to do so;</li>
+            <li>The Comments do not invade any intellectual property right, including without limitation copyright, patent or trademark of any third party;</li>
+            <li>The Comments do not contain any defamatory, libelous, offensive, indecent or otherwise unlawful material which is an invasion of privacy;</li>
+            <li>The Comments will not be used to solicit or promote business or custom or present commercial activities or unlawful activity.</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-700">
+            You hereby grant 22Yards Dallas a non-exclusive license to use, reproduce, edit and authorize others to use, reproduce and edit any of your Comments in any and all forms, formats or media.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            Hyperlinking to our Content
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-2">
+            The following organizations may link to our Website without prior written approval:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm sm:text-base text-gray-700 mb-4">
+            <li>Government agencies;</li>
+            <li>Search engines;</li>
+            <li>News organizations;</li>
+            <li>Online directory distributors may link to our Website in the same manner as they hyperlink to the Websites of other listed businesses; and</li>
+            <li>System wide Accredited Businesses except soliciting non-profit organizations, charity shopping malls, and charity fundraising groups which may not hyperlink to our Web site.</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            These organizations may link to our home page, to publications or to other Website information so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products and/or services; and (c) fits within the context of the linking party’s site.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 mb-2">
+            We may consider and approve other link requests from the following types of organizations:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm sm:text-base text-gray-700 mb-4">
+            <li>commonly-known consumer and/or business information sources;</li>
+            <li>dot.com community sites;</li>
+            <li>associations or other groups representing charities;</li>
+            <li>online directory distributors;</li>
+            <li>internet portals;</li>
+            <li>accounting, law and consulting firms; and</li>
+            <li>educational institutions and trade associations.</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            We will approve link requests from these organizations if we decide that: (a) the link would not make us look unfavorably to ourselves or to our accredited businesses; (b) the organization does not have any negative records with us; (c) the benefit to us from the visibility of the hyperlink compensates the absence of 22Yards Dallas; and (d) the link is in the context of general resource information.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            These organizations may link to our home page so long as the link: (a) is not in any way deceptive; (b) does not falsely imply sponsorship, endorsement or approval of the linking party and its products or services; and (c) fits within the context of the linking party’s site.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            If you are one of the organizations listed in paragraph 2 above and are interested in linking to our website, you must inform us by sending an e-mail to 22Yards Dallas. Please include your name, your organization name, contact information as well as the URL of your site, a list of any URLs from which you intend to link to our Website, and a list of the URLs on our site to which you would like to link. Wait 2-3 weeks for a response.
+          </p>
+          <p className="text-sm sm:text-base font-semibold text-gray-800 mb-2">
+            Approved organizations may hyperlink to our Website as follows:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm sm:text-base text-gray-700 mb-4">
+            <li>By use of our corporate name; or</li>
+            <li>By use of the uniform resource locator being linked to; or</li>
+            <li>By use of any other description of our Website being linked to that makes sense within the context and format of content on the linking party’s site.</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-700">
+            No use of 22Yards Dallas's logo or other artwork will be allowed for linking absent a trademark license agreement.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            iFrames
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700">
+            Without prior approval and written permission, you may not create frames around our Webpages that alter in any way the visual presentation or appearance of our Website.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            Content Liability
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700">
+            We shall not be held responsible for any content that appears on your Website. You agree to protect and defend us against all claims that is rising on your Website. No link(s) should appear on any Website that may be interpreted as libelous, obscene or criminal, or which infringes, otherwise violates, or advocates the infringement or other violation of, any third party rights.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            Reservation of Rights
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700">
+            We reserve the right to request that you remove all links or any particular link to our Website. You approve to immediately remove all links to our Website upon request. We also reserve the right to amen these terms and conditions and it’s linking policy at any time. By continuously linking to our Website, you agree to be bound to and follow these linking terms and conditions.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            Removal of links from our website
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            If you find any link on our Website that is offensive for any reason, you are free to contact and inform us any moment. We will consider requests to remove links but we are not obligated to or so or to respond to you directly.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700">
+            We do not ensure that the information on this website is correct, we do not warrant its completeness or accuracy; nor do we promise to ensure that the website remains available or that the material on the website is kept up to date.
+          </p>
+        </section>
+
+        <section className="mb-8">
+          <h2 className="text-2xl font-bold text-[#1A1A1A] mb-3">
+            Disclaimer
+          </h2>
+          <p className="text-sm sm:text-base text-gray-700 mb-2">
+            To the maximum extent permitted by applicable law, we exclude all representations, warranties and conditions relating to our website and the use of this website. Nothing in this disclaimer will:
+          </p>
+          <ul className="list-disc pl-6 space-y-1 text-sm sm:text-base text-gray-700 mb-4">
+            <li>limit or exclude our or your liability for death or personal injury;</li>
+            <li>limit or exclude our or your liability for fraud or fraudulent misrepresentation;</li>
+            <li>limit any of our or your liabilities in any way that is not permitted under applicable law; or</li>
+            <li>exclude any of our or your liabilities that may not be excluded under applicable law.</li>
+          </ul>
+          <p className="text-sm sm:text-base text-gray-700 mb-4">
+            The limitations and prohibitions of liability set in this Section and elsewhere in this disclaimer: (a) are subject to the preceding paragraph; and (b) govern all liabilities arising under the disclaimer, including liabilities arising in contract, in tort and for breach of statutory duty.
+          </p>
+          <p className="text-sm sm:text-base text-gray-700">
+            As long as the website and the information and services on the website are provided free of charge, we will not be liable for any loss or damage of any nature.
+          </p>
+        </section>
+      </main>
 
       <SiteFooter />
     </div>

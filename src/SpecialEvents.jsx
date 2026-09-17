@@ -4,7 +4,7 @@ import SiteUtilityBar from "./SiteUtilityBar";
 import SiteHeader from "./SiteHeader";
 import RentALaneBanner from "./RentALaneBanner";
 import heroCustom from "./assets/hero-custom-image.png";
-import crics1Img from "./assets/crics 1.jpeg";
+import crics1Img from "./assets/crics.jpg";
 import crics4Img from "./assets/crics4.jpeg";
 import kidsBirthdayImg from "./assets/kids_birthday_party.jpg";
 

@@ -16,10 +16,14 @@ import SelectionSummaryPage from './SelectionSummaryPage';
 import SelectCentrePage from './SelectCentrePage';
 import TermsAndConditionsPage from './TermsAndConditionsPage';
 import PrivacyPolicyPage from './PrivacyPolicyPage';
+import DisclaimerPage from './DisclaimerPage';
+import WaiverAndCancellationsPage from './WaiverAndCancellationsPage';
 import DurationSelectionPage from './DurationSelectionPage';
+import FaqsPage from './FaqsPage';
 
 export default function App() {
   const getPage = () => {
+    if (window.location.hash === '#faqs' || window.location.hash === '#faq') return 'faqs';
     if (window.location.hash === '#about') return 'about';
     if (window.location.hash === '#coaching' || window.location.hash === '#ska-registration') return 'coaching';
     if (window.location.hash === '#contact') return 'contact';
@@ -34,6 +38,8 @@ export default function App() {
     if (window.location.hash.startsWith('#selection-summary')) return 'selection-summary';
     if (window.location.hash === '#terms-and-conditions' || window.location.hash === '#terms' || window.location.hash === '#terms-conditions') return 'terms-and-conditions';
     if (window.location.hash === '#privacy-policy' || window.location.hash === '#privacy') return 'privacy-policy';
+    if (window.location.hash === '#disclaimer') return 'disclaimer';
+    if (window.location.hash === '#waiver-and-cancellations-policy' || window.location.hash === '#waiver' || window.location.hash === '#waiver-cancellation') return 'waiver-and-cancellations-policy';
     if (window.location.hash === '#special-events') return 'special-events';
     if (window.location.hash === '#summer-camp') return 'summer-camp';
     return 'home';
@@ -112,8 +118,11 @@ export default function App() {
   }
   if (page === 'terms-and-conditions') return <TermsAndConditionsPage />;
   if (page === 'privacy-policy') return <PrivacyPolicyPage />;
+  if (page === 'disclaimer') return <DisclaimerPage />;
+  if (page === 'waiver-and-cancellations-policy') return <WaiverAndCancellationsPage />;
   if (page === 'special-events') return <SpecialEvents />;
   if (page === 'summer-camp') return <SummerCamp />;
+  if (page === 'faqs') return <FaqsPage />;
   return <HomePage />;
 }
 

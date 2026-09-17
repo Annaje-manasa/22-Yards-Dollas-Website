@@ -17,6 +17,8 @@ import {
 import SiteHeader from "./SiteHeader";
 import SiteFooter from "./SiteFooter";
 import crics2Img from "./assets/crics 2.jpeg";
+import crics3Img from "./assets/crics3.jpeg";
+import crics4Img from "./assets/crics4.jpeg";
 
 /* ------------------------------------------------------------------ */
 /*  Design tokens — 22 Yards Dallas Unified Design System              */
@@ -74,19 +76,19 @@ const keyMembers = [
   {
     name: "Founders & Leadership",
     role: "Core Visionaries",
-    image: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg",
+    image: crics3Img,
     bio: "Combining a passion for cricket with entrepreneurial drive, our founders built 22Yards Dallas into a premier indoor facility dedicated to youth development, high-performance training, and community engagement.",
   },
   {
     name: "Vardhan Vundavalli",
     role: "Co-Founder & Operations Lead",
-    image: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg",
+    image: crics4Img,
     bio: "Spearheading state-of-the-art facility management, tournament organizing, and technology integration (Smart Lanes & Automated Bowling Machines) to deliver world-class practice experiences.",
   },
   {
     name: "Ian Dev Singh",
     role: "Head of Player Development",
-    image: "https://22yardsdallas.com/wp-content/uploads/2026/04/Ian-Dev-Singh_22yardsdallas.png",
+    image: crics2Img,
     bio: "Former First-Class domestic cricketer with vast international competitive experience, driving elite batting modules and personalized player acceleration tracks across all age divisions.",
   },
 ];
@@ -100,35 +102,35 @@ const coaches = [
     title: "Coach 1",
     role: "Head Coach",
     bio: "Senior Master Coach leading comprehensive tactical drills, match simulations, and mental strength development workshops for competitive athletes.",
-    image: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg",
+    image: crics3Img,
   },
   {
     id: 2,
     title: "Coach 2",
     role: "Head Coach",
     bio: "High-Performance Batting & Fielding Mentor specializing in shot precision, biomechanics, footwork agility, and high-pressure match scenarios.",
-    image: "https://22yardsdallas.com/wp-content/uploads/2026/04/Ian-Dev-Singh_22yardsdallas.png",
+    image: crics4Img,
   },
   {
     id: 3,
     title: "Coach 3",
     role: "Head Coach",
     bio: "A lifelong student of the game with nearly 20+ years of playing and coaching experience in competitive leagues. Specializes in technical batting stance, video swing analysis, and mental match prep.",
-    image: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg",
+    image: crics2Img,
   },
   {
     id: 4,
     title: "Coach 4",
     role: "Head Coach",
     bio: "Certified Level-2 bowling specialist focusing on seam control, spin variations, run-up biomechanics, and tactical execution for match scenarios.",
-    image: "https://22yardsdallas.com/wp-content/uploads/2026/04/Ian-Dev-Singh_22yardsdallas.png",
+    image: crics3Img,
   },
   {
     id: 5,
     title: "Coach 5",
     role: "Head Coach",
     bio: "Fielding and athletic conditioning strategist dedicated to agility, reaction speed, wicketkeeping fundamentals, and team-building camaraderie.",
-    image: "https://22yardsdallas.com/wp-content/uploads/2025/08/coach_3.jpg",
+    image: crics4Img,
   },
 ];
 

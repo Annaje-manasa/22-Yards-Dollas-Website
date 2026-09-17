@@ -9,7 +9,7 @@ import SiteHeader from "./SiteHeader";
 import RentALaneBanner from "./RentALaneBanner";
 
 // Content-matched custom asset images for About Us page
-import heroImg from "./assets/crics 2.jpeg";
+import heroImg from "./assets/aboutus.jpeg";
 import facilityBrandImg from "./assets/indoor_cricket_facility.jpg";
 import understandingGameImg from "./assets/crics3.jpeg";
 import personalizedCoachingImg from "./assets/crics4.jpeg";
@@ -191,12 +191,16 @@ export default function AboutPage() {
       {/* ============================ 1. THE CRICKET ACADEMY DALLAS DESERVES ============================ */}
       <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 border-t border-b" style={{ background: BG_SECTION, borderColor: BORDER_COLOR }}>
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-          <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3] bg-slate-200">
-            <img
-              src={facilityBrandImg}
-              alt="22Yards Dallas Indoor Cricket Academy Facility"
-              className="w-full h-full object-cover"
+          <div className="rounded-2xl overflow-hidden shadow-lg aspect-[4/3] bg-slate-200 relative select-none">
+            <iframe
+              src="https://www.youtube.com/embed/mCU39sMo68k?autoplay=1&mute=1&loop=1&playlist=mCU39sMo68k&controls=0&disablekb=1&fs=0&modestbranding=1&rel=0&iv_load_policy=3&autohide=1&playsinline=1"
+              title="22Yards Dallas Indoor Cricket Academy Video"
+              className="absolute w-[150%] h-[150%] -top-[25%] -left-[25%] object-cover pointer-events-none border-0"
+              style={{ pointerEvents: "none" }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
             />
+            <div className="absolute inset-0 z-30 pointer-events-auto" />
           </div>
           <div className="text-left">
             <Eyebrow>Dallas Cricket Ecosystem</Eyebrow>
@@ -263,6 +267,8 @@ export default function AboutPage() {
               alt="22Yards Dallas Elite Coaching Team"
               className="w-full h-full object-cover"
             />
+     
+     
           </div>
         </div>
       </section>
